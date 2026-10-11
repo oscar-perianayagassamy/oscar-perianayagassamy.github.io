@@ -24,7 +24,7 @@ body {
   font-family: var(--police);
   line-height: 1.65;
 }
-.page { max-width: 36rem; margin: 0 auto; padding: 4rem 1.5rem 3rem; }
+.page { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem 3rem; }
 a { color: var(--accent); text-underline-offset: 0.2em; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 h1 { font-size: 2.6rem; line-height: 1.1; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 0.5rem; }
@@ -83,16 +83,44 @@ footer { margin-top: 4rem; color: var(--discret); font-size: 0.85rem; }
   .grille { grid-template-columns: 1fr; }
 }
 
-
 /* Photo de l'accueil */
 .photo {
   display: block;
-  width: 9.5rem;
+  width: 10.5rem;
   height: auto;
   aspect-ratio: 2 / 3;
   object-fit: cover;
   object-position: center 20%;
   border-radius: 4px;
-  margin: 1.25rem 0 1.5rem;
+  margin: 0 0 1.5rem;
 }
- 
+
+/* Bandeaux latéraux flous des pages intérieures */
+.fond {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-color: var(--teinte);
+  background-size: cover;
+  background-position: center;
+  filter: blur(22px);
+  transform: scale(1.1); /* évite les bords clairs dus au flou */
+}
+.bandeaux .page {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  background: var(--fond);
+}
+
+
+/* En-tête de l'accueil : nom au-dessus, puis texte à gauche et photo à droite */
+header h1 { margin-bottom: 1.25rem; }
+.entete {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.entete .sous-titre { flex: 1; min-width: 0; margin: 0 0 2rem; }
+header + main { margin-top: 1rem; }
