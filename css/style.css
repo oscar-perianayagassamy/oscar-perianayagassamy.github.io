@@ -61,7 +61,6 @@ footer { margin-top: 4rem; color: var(--discret); font-size: 0.85rem; }
   color: #fff;
   text-decoration: none;
   background-color: var(--teinte);
-  background-image: var(--img);
   background-size: cover;
   background-position: center;
   border-radius: 4px;
@@ -83,3 +82,17 @@ footer { margin-top: 4rem; color: var(--discret); font-size: 0.85rem; }
 @media (max-width: 22rem) {
   .grille { grid-template-columns: 1fr; }
 }
+
+
+/* Photo de l'accueil */
+.photo {
+  display: block;
+  width: 9.5rem;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 4px;
+  margin: 1.25rem 0 1.5rem;
+}
+ 
