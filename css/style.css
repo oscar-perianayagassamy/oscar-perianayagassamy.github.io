@@ -148,13 +148,3 @@ header + main { margin-top: 1rem; }
   .fond-anime div:first-child { opacity: 1; }
 }
  
-
-/* Pluie sur les bandes latérales (dessinée par js/pluie.js) */
-.pluie {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
