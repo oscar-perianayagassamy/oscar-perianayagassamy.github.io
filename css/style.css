@@ -40,3 +40,46 @@ h2 { font-size: 1.3rem; margin: 2.5rem 0 0.5rem; }
 .nav-haut a { margin-right: 1.25rem; }
 .nav-haut a[aria-current="page"] { color: var(--texte); text-decoration: none; font-weight: 600; }
 footer { margin-top: 4rem; color: var(--discret); font-size: 0.85rem; }
+
+/* Grille de tuiles de l'accueil */
+.page-large { max-width: 42rem; }
+.grille {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+.tuile {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  aspect-ratio: 1 / 1;
+  padding: 1.1rem;
+  overflow: hidden;
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--teinte);
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+}
+/* Voile sombre pour garder le texte lisible sur n'importe quelle image */
+.tuile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.1) 60%);
+  transition: background 0.2s;
+}
+.tuile:hover::before,
+.tuile:focus-visible::before {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3) 70%);
+}
+.tuile:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.tuile span { position: relative; font-size: 1.4rem; font-weight: 600; }
+@media (max-width: 22rem) {
+  .grille { grid-template-columns: 1fr; }
+}
