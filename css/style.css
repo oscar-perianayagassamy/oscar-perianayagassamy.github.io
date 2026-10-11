@@ -1,0 +1,42 @@
+:root {
+  --fond: #f6f7f5;
+  --texte: #1c2024;
+  --discret: #5c646c;
+  --accent: #23468c;
+  --trait: #d5d9dc;
+  --police: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #16191c;
+    --texte: #e8eaec;
+    --discret: #9aa3ab;
+    --accent: #8fb0f0;
+    --trait: #2d3338;
+  }
+}
+* { box-sizing: border-box; }
+html { font-size: 112.5%; }
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: var(--police);
+  line-height: 1.65;
+}
+.page { max-width: 36rem; margin: 0 auto; padding: 4rem 1.5rem 3rem; }
+a { color: var(--accent); text-underline-offset: 0.2em; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+h1 { font-size: 2.6rem; line-height: 1.1; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 0.5rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 0.5rem; }
+.sous-titre { color: var(--discret); margin: 0 0 3rem; }
+.menu { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--trait); }
+.menu li { border-bottom: 1px solid var(--trait); }
+.menu a { display: block; padding: 1rem 0; text-decoration: none; }
+.menu strong { display: block; font-size: 1.15rem; color: var(--accent); }
+.menu span { color: var(--discret); font-size: 0.95rem; }
+.menu a:hover strong { text-decoration: underline; }
+.nav-haut { margin-bottom: 3rem; font-size: 0.95rem; }
+.nav-haut a { margin-right: 1.25rem; }
+.nav-haut a[aria-current="page"] { color: var(--texte); text-decoration: none; font-weight: 600; }
+footer { margin-top: 4rem; color: var(--discret); font-size: 0.85rem; }
