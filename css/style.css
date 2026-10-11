@@ -42,14 +42,15 @@ h2 { font-size: 1.3rem; margin: 2.5rem 0 0.5rem; }
 footer { margin-top: 4rem; color: var(--discret); font-size: 0.85rem; }
 
 /* Grille de tuiles de l'accueil */
-.page-large { max-width: 42rem; }
+.page-large { max-width: 50rem; }
 .grille {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
+  
 }
 .tuile {
   position: relative;
@@ -124,3 +125,36 @@ header h1 { margin-bottom: 1.25rem; }
 }
 .entete .sous-titre { flex: 1; min-width: 0; margin: 0 0 2rem; }
 header + main { margin-top: 1rem; }
+
+
+/* Bandes latérales animées de l'accueil : les 4 images se fondent l'une dans l'autre */
+.fond-anime div {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fondu 32s linear infinite;
+}
+@keyframes fondu {
+  0%   { opacity: 0; }
+  6%   { opacity: 1; }
+  25%  { opacity: 1; }
+  31%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fond-anime div { animation: none; }
+  .fond-anime div:first-child { opacity: 1; }
+}
+ 
+
+/* Pluie sur les bandes latérales (dessinée par js/pluie.js) */
+.pluie {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
