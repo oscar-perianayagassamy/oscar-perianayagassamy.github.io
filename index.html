@@ -9,27 +9,24 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bandeaux">
-  <div class="fond fond-anime" aria-hidden="true" style="--teinte: #23468c;">
-    <div style="background-image: url('assets/bg/1.JPG'); animation-delay: -2s;"></div>
-    <div style="background-image: url('assets/bg/2.jpg'); animation-delay: 6s;"></div>
-    <div style="background-image: url('assets/bg/3.JPG'); animation-delay: 14s;"></div>
-    <div style="background-image: url('assets/bg/4.jpg'); animation-delay: 22s;"></div>
-  </div>
+  <div class="fond" aria-hidden="true" style="background-image: url('assets/bg/1.JPG'); --teinte: #23468c;"></div>
+   <canvas id="pluie" class="pluie" aria-hidden="true"></canvas>
   <div class="page page-large">
+
     <header>
-        <h1>Oscar PERIANAYAGASSAMY</h1>
       <div class="entete">
+  <img class="photo" src="assets/grille-homepage/photo-perso.jpg" alt="Portrait de Oscar Perianayagassamy" width="120" height="180">
+  <div class="entete-texte">
+    <h1>Oscar PERIANAYAGASSAMY</h1>
+    <h2 class="role">PhD student in Data Engineering · LAMSADE, Université Paris-Dauphine PSL</h2>
+  </div>
+</div>
       <p class="sous-titre">
-        PhD student in Data Engineering at LAMSADE, Université Paris-Dauphine PSL. 
-        </br>
-        </br>
         The thesis focuses on developing new techniques for schema inference at scale, data quality analysis and schema-driven analytics over heterogeneous datalakes.
         </br>
         </br>
         The work is carried out under the supervision of Pr. Dario COLAZZO within LAMSADE's Data Science Team.
       </p>
-      <img class="photo" src="assets/grille-homepage/photo-perso.jpg" alt="Portrait de Oscar Perianayagassamy" width="120" height="180">
-      </div>
     </header>
 </body>
 
@@ -44,5 +41,6 @@
     </main>
     <footer>© 2026 Oscar Perianayagassamy</footer>
   </div>
+  <script src="js/pluie.js" defer></script>
 </body>
 </html>

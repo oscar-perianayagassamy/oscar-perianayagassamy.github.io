@@ -87,9 +87,9 @@ footer { margin-top: 4rem; color: var(--discret); font-size: 0.85rem; }
 /* Photo de l'accueil */
 .photo {
   display: block;
-  width: 10.5rem;
+  width: 9.5rem;
   height: auto;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 142 / 195;
   object-fit: cover;
   object-position: center 20%;
   border-radius: 4px;
@@ -123,7 +123,9 @@ header h1 { margin-bottom: 1.25rem; }
   justify-content: space-between;
   gap: 1.5rem;
 }
+.role { margin: 0.4rem 0 0; color: var(--discret); font-size: 1.05rem; }
 .entete .sous-titre { flex: 1; min-width: 0; margin: 0 0 2rem; }
+header .sous-titre { margin: 1.5rem 0 2rem; }
 header + main { margin-top: 1rem; }
 
 
@@ -148,3 +150,13 @@ header + main { margin-top: 1rem; }
   .fond-anime div:first-child { opacity: 1; }
 }
  
+
+/* Pluie sur les bandes latérales (dessinée par js/pluie.js) */
+.pluie {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
