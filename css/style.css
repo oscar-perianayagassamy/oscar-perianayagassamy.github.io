@@ -104,7 +104,7 @@ footer { margin-top: 4rem; color: var(--discret); font-size: 0.85rem; }
   background-color: var(--teinte);
   background-size: cover;
   background-position: center;
-  filter: blur(22px);
+  filter: blur(5px);
   transform: scale(1.1); /* évite les bords clairs dus au flou */
 }
 .bandeaux .page {
@@ -124,6 +124,7 @@ header h1 { margin-bottom: 1.25rem; }
   gap: 1.5rem;
 }
 .role { margin: 0.4rem 0 0; color: var(--discret); font-size: 1.05rem; }
+.info { margin: 0.4rem 0 0; color: var(--discret); font-size: 0.80rem; }
 .entete .sous-titre { flex: 1; min-width: 0; margin: 0 0 2rem; }
 header .sous-titre { margin: 1.5rem 0 2rem; }
 header + main { margin-top: 1rem; }
@@ -159,4 +160,14 @@ header + main { margin-top: 1rem; }
   height: 100%;
   z-index: 0;
   pointer-events: none;
+}
+
+/* Pages annexes : fond blanc, contenu aligné à gauche */
+.sobre { background: #fff; }
+.sobre .page { margin: 0; max-width: 46rem; padding-left: 3rem; padding-right: 3rem; }
+@media (prefers-color-scheme: dark) {
+  .sobre { background: var(--fond); }
+}
+@media (max-width: 36rem) {
+  .sobre .page { padding-left: 1.5rem; padding-right: 1.5rem; }
 }
