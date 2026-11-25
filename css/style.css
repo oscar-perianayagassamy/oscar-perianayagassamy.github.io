@@ -82,6 +82,8 @@ footer { margin-top: 4rem; color: var(--discret); font-size: 0.85rem; }
 .tuile span { position: relative; font-size: 1.4rem; font-weight: 600; }
 @media (max-width: 36rem) {
   .grille { grid-template-columns: 1fr; }
+  /* En-tête empilé : photo au-dessus, texte en dessous, sans débordement */
+  .entete { flex-direction: column; gap: 0; }
 }
 
 /* Photo de l'accueil */
@@ -117,6 +119,10 @@ footer { margin-top: 4rem; color: var(--discret); font-size: 0.85rem; }
 
 /* En-tête de l'accueil : nom au-dessus, puis texte à gauche et photo à droite */
 header h1 { margin-bottom: 1.25rem; }
+/* Empêche le texte de l'en-tête de déborder hors de l'écran sur téléphone */
+.entete-texte { flex: 1; min-width: 0; }
+.entete .photo { flex-shrink: 0; }
+header h1, header .info { overflow-wrap: anywhere; }
 .entete {
   display: flex;
   align-items: flex-start;
