@@ -82,10 +82,8 @@ footer { margin-top: 4rem; color: var(--discret); font-size: 0.85rem; }
 .tuile span { position: relative; font-size: 1.4rem; font-weight: 600; }
 @media (max-width: 36rem) {
   .grille { grid-template-columns: 1fr; }
-  /* En-tête empilé : photo au-dessus, texte en dessous, sans débordement */
-  .entete { flex-direction: column; gap: 0; }
-  .entete .photo { width: 7rem; margin-bottom: 1rem; }
-  header h1 { font-size: 1.9rem; }
+  /* Toute la page suit la largeur de l'écran : 4 % de la largeur, entre 13 px et 18 px */
+  html { font-size: clamp(13px, 4vw, 18px); }
 }
 
 /* Photo de l'accueil */
