@@ -80,7 +80,7 @@ footer { margin-top: 4rem; color: var(--discret); font-size: 0.85rem; }
 }
 .tuile:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .tuile span { position: relative; font-size: 1.4rem; font-weight: 600; }
-@media (max-width: 22rem) {
+@media (max-width: 36rem) {
   .grille { grid-template-columns: 1fr; }
 }
 
