@@ -84,6 +84,8 @@ footer { margin-top: 4rem; color: var(--discret); font-size: 0.85rem; }
   .grille { grid-template-columns: 1fr; }
   /* En-tête empilé : photo au-dessus, texte en dessous, sans débordement */
   .entete { flex-direction: column; gap: 0; }
+  .entete .photo { width: 7rem; margin-bottom: 1rem; }
+  header h1 { font-size: 1.9rem; }
 }
 
 /* Photo de l'accueil */
